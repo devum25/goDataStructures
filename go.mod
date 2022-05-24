@@ -1,3 +1,3 @@
 module github.com/dev/datastructures
 
-go 1.17
+go 1.16

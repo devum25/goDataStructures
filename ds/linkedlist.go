@@ -5,6 +5,58 @@ import (
 	"fmt"
 )
 
+func main(){
+	l := &LinkedList{}
+	l.Insert(0)
+	l.Insert(1)
+	l.Insert(2)
+	l.Insert(3)
+	l.Insert(4)
+
+   l.Print()
+  //1 2 3 4 5
+ 
+  comp := make(map[int]*Node)
+    
+  ptr := l.head
+  
+  count := 0
+  
+  
+  for ptr != nil{
+	  
+	  if ptr.next != nil{
+	  comp[ptr.val] = ptr.next
+	  }else{
+		  comp[ptr.val] = nil
+	  }
+		   
+	  ptr = ptr.next
+  }
+  
+  nums := make([]int,0)
+  nums = append(nums, 0,3,1,4)
+
+  x := make(map[int]bool)
+  
+  for i := 0;i < len(nums);i++{
+	  
+	  for j := 0;j < len(nums);j++{
+		  if comp[nums[i]] != nil{
+				  if comp[nums[i]].val == nums[j]{
+					  x[nums[j]] = true
+					  count++
+				  }
+		  }else{
+			  y := x[nums[j]]
+			  if y == false{
+			  count++
+			  break
+			  }
+		  }
+	  }
+  }
+}
 
 type Node struct{
 	val int

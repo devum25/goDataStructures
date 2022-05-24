@@ -5,7 +5,7 @@ type MaxHeap struct{
 	Array []int
 }
 
-func NewHeap() *MaxHeap{
+func NewMaxHeap() *MaxHeap{
   return  &MaxHeap{Array: []int{-1}}
 }
 

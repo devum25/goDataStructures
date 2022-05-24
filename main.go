@@ -31,31 +31,33 @@ func main(){
    // // l.Search(2)
    // l.GetAt(1)
 
-    heap := ds.NewHeap("Min")
+    heap := ds.NewHeap("Max")
 
-   // heap.Array = append(heap.Array,100,40,50,20,30,15)
+   heap.Array = append(heap.Array,100,40,50,20,30,15)
 
-   // heap.Insert(120)
+   heap.Insert(120)
 
-   // fmt.Println(heap.Array)
+   fmt.Println(heap.Array)
 
-   // fmt.Println(heap.Pop())
+   fmt.Println(heap.Pop())
 
-   // fmt.Println(heap.Array)
+   fmt.Println(heap.Array)
 
 
    // heap := ds.NewMinHeap()
 
-    heap.Array = append(heap.Array, 10,30,40,50,55,65,60)
+   //  heap.Array = append(heap.Array, 10,30,40,50,55,65,60)
    
-    heap.Insert(5)
+   //  heap.Insert(5)
 
-    fmt.Println(heap.Array)
+   //  fmt.Println(heap.Array)
 
-   // for i:=0;i<5;i++{
+   for i:=0;i<5;i++{
 
    
-   // fmt.Println(heap.Pop())
+   fmt.Println(heap.Pop())
 
-   // fmt.Println(heap.Array)
+   fmt.Println(heap.Array)
    }
+   }
+   

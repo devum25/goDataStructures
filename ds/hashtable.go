@@ -68,7 +68,22 @@ func (b *bucket) search(k string) interface{}{
 }
 // bucket delete
 func (b *bucket) delete(k string){
+   
+	if b.head.key == k{
+		b.head = b.head.next
+		return
+	}
+	
+	previousNode := b.head
 
+	for previousNode.next != nil{
+		if previousNode.next.key == k{
+			previousNode.next = previousNode.next.next
+			return
+		}else{
+			previousNode = previousNode.next
+		}
+	}
 }
 
 // hash function

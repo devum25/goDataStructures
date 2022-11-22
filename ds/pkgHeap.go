@@ -29,6 +29,7 @@ func (h IntHeap) Top() int{
 
 func TestHeap(){
 	h := &IntHeap{50,40,70,60}
+	h1 := *h
 	heap.Init(h)
 	heap.Push(h,100)
 	heap.Push(h,110)
@@ -39,5 +40,7 @@ func TestHeap(){
 	for h.Len() > 0 {
 		fmt.Printf("%d ", heap.Pop(h))
 	}
+
+	fmt.Println(h1.Len())
 
 }
